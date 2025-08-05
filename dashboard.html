@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <style>
+        body {
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.container, .box, .contador-box, .playlist-box {
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+        :root {
+            --verde-lima: #A4F729;
+            --preto: #181818;
+            --branco: #FFFFFF;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: var(--verde-lima);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box {
+            background: var(--branco);
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 18px rgba(24,24,24,0.13);
+            text-align: center;
+            border: 3px solid var(--preto);
+            width: 100%;
+            max-width: 400px;
+        }
+        h1 {
+            color: var(--preto);
+            margin-bottom: 32px;
+            font-weight: bold;
+        }
+        .caminhos {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+        .caminhos a, .caminhos button {
+            display: block;
+            padding: 18px;
+            border-radius: 8px;
+            background: var(--verde-lima);
+            color: var(--preto);
+            text-decoration: none;
+            font-size: 1.1em;
+            border: 2px solid var(--preto);
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+        }
+        .caminhos a:hover, .caminhos button:hover {
+            background: var(--preto);
+            color: var(--verde-lima);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>ESCOLHE ESCOLHE</h1>
+        <div class="caminhos">
+            <a href="cronometro.html">CONTADOR DE DIAS</a>
+            <a href="playlist.html">PLAYLIST</a>
+            <a href="texto.html">TEXTINHO</a>
+            <a href="https://br.pinterest.com/ashxz7__/gi-%2B-ash/" target="_blank" rel="noopener">ME+YOU</a>
+        </div>
+    </div>
+</body>
+</html>

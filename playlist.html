@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist</title>
+    <style>
+        body {
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.container, .box, .contador-box, .playlist-box {
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+iframe {
+    width: 100%;
+    max-width: 100%;
+}
+.playlist-box {
+    width: 100%;
+    max-width: 400px;
+}
+
+        :root {
+            --verde-lima: #A4F729;
+            --preto: #181818;
+            --branco: #FFFFFF;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: var(--verde-lima);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .playlist-box {
+            background: var(--branco);
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 18px rgba(24,24,24,0.13);
+            text-align: center;
+            border: 3px solid var(--preto);
+        }
+        h1 {
+            color: var(--preto);
+        }
+        iframe {
+            margin: 20px 0;
+            border-radius: 8px;
+            border: 2px solid var(--preto);
+        }
+        p {
+            color: var(--preto);
+        }
+        a {
+            display: block;
+            margin-top: 30px;
+            color: var(--preto);
+            background: var(--verde-lima);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            border: 2px solid var(--preto);
+            padding: 12px 0;
+            transition: background 0.2s, color 0.2s;
+        }
+        a:hover {
+            color: var(--verde-lima);
+            background: var(--preto);
+        }
+    </style>
+</head>
+<body>
+    <div class="playlist-box">
+        <h1>Playlist</h1>
+        <!-- Exemplo: Playlist do YouTube embutida -->
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5EYv4NWuEglc90wzS3PTEu?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <p>eu te amo muito meu bem!!</p>
+        <a href="dashboard.html">Voltar!!</a>
+    </div>
+</body>
+</html>

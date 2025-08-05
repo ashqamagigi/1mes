@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texto</title>
+    <style>
+        body {
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.container, .box, .contador-box, .playlist-box {
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+        :root {
+            --verde-lima: #A4F729;
+            --preto: #181818;
+            --branco: #FFFFFF;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: var(--verde-lima);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .texto-box {
+            background: var(--branco);
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 18px rgba(24,24,24,0.13);
+            text-align: center;
+            max-width: 500px;
+            border: 3px solid var(--preto);
+        }
+        h1 {
+            color: var(--preto);
+        }
+        #typed-text {
+            margin-top: 22px;
+            font-size: 1.18em;
+            color: var(--preto);
+            min-height: 60px;
+            white-space: pre-line;
+        }
+        a, button {
+            display: block;
+            margin-top: 30px;
+            color: var(--preto);
+            background: var(--verde-lima);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            border: 2px solid var(--preto);
+            padding: 12px 0;
+            transition: background 0.2s, color 0.2s;
+            width: 80%;
+            cursor: pointer;
+            font-size: 1em;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+        a:hover, button:hover {
+            color: var(--verde-lima);
+            background: var(--preto);
+        }
+        audio {
+            margin-top: 18px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="texto-box">
+    <h1>TEXTINHO</h1>
+    <p> de o play para ler!!</p>
+    <img src="image4.jpeg" alt="MWAH MWAH" style="width: 500px;">
+    <div id="typed-text"></div>
+    <button id="play-btn">musiquinha(recomendado baixar o volume)</button>
+    <audio id="musica">
+        <source src="Damiano David - The First Time (Official Visual Video) [n1Hzf_is8tI].mp3" type="audio/mpeg">
+    </audio>
+    <a href="dashboard.html">Voltar!!</a>
+</div>
+<script>
+    // Texto que será "digitado"
+    const texto = `para a MINHA namorada.\nSe você está lendo isso provavelmente a é dia 05/07 direto ao ponto, nosso PRIMEIRO (de muitos é lógico) aniversario de namoro\neu sei que você já está morta de saber, mas eu vou falar sempre, você é uma namorada incrível, perfeita, maravilhosa sem nenhum tipo de erro.\neu escrevi isso para deixar apenas uma lembrança porque  música em si já diz tudo que eu quero dizer.\n 1:45MIN.\n "Before you, I was nothing, was nothing, had nothing \n I only had \n A kiss, a touch, a song that made me cry \n And all the drugs I've done, they never got me higher\n Than the first time we met \n There's nothing like the first time we met\n-the fist time"`;
+    const typedText = document.getElementById('typed-text');
+    let idx = 0;
+    let isPlaying = false;
+
+    function typeWriter() {
+        if (idx < texto.length) {
+            typedText.textContent += texto[idx];
+            idx++;
+            setTimeout(typeWriter, 40);
+        }
+    }
+
+    document.getElementById('play-btn').onclick = function() {
+        const audio = document.getElementById('musica');
+        if (!isPlaying) {
+            isPlaying = true;
+            audio.play();
+            typeWriter();
+            this.style.display = 'none'; // Esconde o botão após clicar
+        }
+    };
+</script>
+</body>
+</html>
